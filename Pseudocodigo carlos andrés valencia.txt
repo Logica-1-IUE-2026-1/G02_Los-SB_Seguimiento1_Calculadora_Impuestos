@@ -1,0 +1,59 @@
+Variables//
+Días en la ciudad
+Estrato
+Descuento
+
+estrato 0: 0
+estrato 1,2: 500
+estrato 3,4: 50000
+estrato 5: 250000
+estrato 6: 350000
+
+inicio
+
+leer "nombre"
+leer "días en la ciudad"
+leer "estrato"
+leer "descuento, marque 1 si, marque 2 no"
+si si, entonces
+
+seleccionar opción de descuento:
+op1 empleado del gobierno:0.50%
+op2 desempleado:0.10%
+op3 empleado del sector privado: 0.05 %
+op4 perteneciente a la rama académica:7.5%, entonces
+calcular
+total a pagar: (días en la ciudad * estrato) - descuento
+
+si no, entonces
+calcular
+total a pagar 2: (días en la ciudad * estrato)
+
+si
+ 
+beneficiario de algún descuento: 1, entonces
+imprimir
+
+1)valor total:
+mostrar: el resultado de los impuestos para "nombre" es: (días en la ciudad * estrato)
+2)después del descuento,
+mostrar: total a pagar.
+3)porcentaje del descuento
+mostrar: opción de descuento
+
+fin si
+
+si
+
+beneficiario de algún descuento: 2, entonces
+imprimir
+el resultado de los impuestos para "nombre" es: (días en la ciudad * estrato)
+
+final
+
+
+
+
+
+
+
