@@ -1,0 +1,11 @@
+Inicio
+Leer nombre de usuario ("Sara yepes")
+Leer edad ("22 años")
+Asignar estrato ("estrato 5")
+Asignar ocupación ("Auxiliar contable")
+Leer días vividos (365)
+calcular = valor por día * días vividos
+calcular valor sin descuento = 91250000
+Valor de descuento = 5%
+calcular valor del descuento = 4562500
+fin
