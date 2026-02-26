@@ -1,7 +1,7 @@
 Inicio
     Imprimir "Ingrese los datos de la persona: nombre, edad, estrato, días vividos en la ciudad".
     definir  pay,desc,const
-    const <- 0
+    asignar const <- 0
     Leer name,age,stratum,days
 
     Imprimir "Ingrese la ocupación de la persona así: indique 1 si es empleado del gobierno, 
@@ -9,43 +9,43 @@ Inicio
 
     leer occupation
 
-    si occupation < 1 ó > 5
+    si occupation < 1 ó > 4
         entonces Imprimir : "ingrese una ocupación correcta" 
         volver a leer occupation
 
     si occupation = 1
         entonces
-        desc <- 0.5
+        asignar desc <- 0.5
     si no, si occupation = 2
         entonces
-        desc <- 0.1
+        asignar desc <- 0.1
     si no, si occupation = 3
         entonces
-        desc <- 0.05
+        asignar desc <- 0.05
     si no, si occupation = 4
         entonces
-        desc <- 0.075
+        asignar desc <- 0.075
 
 
     si stratum = 0
         entonces
-        pay<-0, desc <-0,
+        asignar pay<-0, desc <-0,
     si no, si stratum = 1 ó stratum = 2 
         entonces
-        pay<-500
+        asignar pay<-500
     si no, si stratum = 3 ó stratum = 4
         entonces 
-        pay<-50000, const <- 1500000
+        asignar pay<-50000, const <- 1500000
     si no, si stratum = 5
         entonces
-        pay<-250000
+        asignar pay<-250000
     si no, si stratum = 6 
         entonces 
-        pay<-350000
+        asignar pay<-350000
 
 
     calcular result1 = pay*days
-             result2 = pay*days*desc
+             result2 = (pay*days*desc)+const
              result3 = desc*100
 
     Imprimir "el resultado de los impuestos para {name} es:"
