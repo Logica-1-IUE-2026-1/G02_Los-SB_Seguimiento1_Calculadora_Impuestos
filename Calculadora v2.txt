@@ -1,0 +1,46 @@
+Inicio
+    definir var=0,minimo=0,descuento=0, descuentoUSD=0
+    Imprimir "seleccione 1 es empleado del gobierno, seleccione 2 si es desempleado, seleccione 3 si es empleado del sector privado, selecciones 4 si esta en la rama academica"
+    Leer ocupacion
+    Si ocupacion < 1 o > 4 
+        Entoces (mostrar "ocupacion no valida")
+        Volver a Imprimir
+    Imprimir "complete los datos basicos"
+    Leer nombre, edad, estrato, dias
+    Imprimir "seleccione 1 si va a pagar en dolares, seleccione 2 si va a pagar en pesos"
+    Leer moneda
+    Si moneda = 1 
+        Entonces asignar descuentoUSD <- 50
+        Asignar comision <- 0.01
+        si no Asignar descuentoUSD <- 0
+    Si estrato = 0
+        Entonces minimo = 0
+    Si estrato 1 o 2 
+        Entonces minimo = 500
+    Si estrato 3 o 4
+        Entonces var = 1500000, minimo = 50000
+    Si estrato = 5
+        Entonces minimo = 250000
+    Si estrato = 6
+        Entonces minimo = 350000
+    Si ocupacion = 1
+        Entonces asignar descuento <- 0.5
+    Si ocupacion = 2
+        Entonces asignar descuento <- 0.1
+    Si ocupacion = 3
+        Entonces asignar descuento <- 0.05
+    Si ocupacion = 4
+        Entonces asignar descuento <- 0.075
+
+    operar resultc <- (minimo * dias * descuento) + var
+    operar resultc2 = resultc + (resultc * 0.01)
+    operar ResultUSD = resultc2 / 3700 
+    operar ResultUSD = ResultUSD -50
+    Si resultc2 < (ResultUSD * 3700)
+        Entonces resultf = resultc2
+        Si no resultf = resultf * 3700
+
+    Imprimir "el valor a pagar en pesos colombianos es:{resultc2}
+    Imprimir "el valor a pagar el dolares es:{ResultUSD * 3700} 
+    Imprimir "el valor mas econimico es:{resultf}
+fin
